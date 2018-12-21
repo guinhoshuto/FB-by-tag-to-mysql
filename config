@@ -1,0 +1,35 @@
+<?php
+$servername = "";
+$username = "";
+$password = "";
+$db = "";
+
+$act_id = "";
+$page_id = "";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $db);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+
+printf("Initial character set: %s\n", mysqli_character_set_name($conn));
+
+/* change character set to utf8 */
+if (!mysqli_set_charset($conn, "utf8")) {
+    printf("Error loading character set utf8: %s\n", mysqli_error($conn));
+    exit();
+} else {
+    printf("Current character set: %s\n", mysqli_character_set_name($conn));
+}
+
+$fb = new Facebook\Facebook([
+    'app_id' => '', // Replace {app-id} with your app id
+    'app_secret' => '',
+    'default_graph_version' => 'v3.2',
+]);
+$token = '';
+?>
