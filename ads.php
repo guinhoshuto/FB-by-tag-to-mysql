@@ -6,7 +6,7 @@ require __DIR__ . '/config.php';
 try {
   // Returns a `FacebookFacebookResponse` object
   $response = $fb->get(
-    $act_id . '?fields=adsets.limit(100){name,lifetime_budget,budget_remaining,end_time,start_time,campaign{adlabels},id,campaign_id,account_id,created_time,configured_status,effective_status,status,ads{adcreatives{effective_object_story_id}}}',
+    'act_1457805817613704?fields=adsets.limit(100){name,lifetime_budget,budget_remaining,end_time,start_time,campaign{adlabels},id,campaign_id,account_id,created_time,configured_status,effective_status,status,ads{adcreatives{effective_object_story_id}}}',
     $token
   );
 } catch(FacebookExceptionsFacebookResponseException $e) {

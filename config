@@ -4,9 +4,6 @@ $username = "";
 $password = "";
 $db = "";
 
-$act_id = "";
-$page_id = "";
-
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $db);
 

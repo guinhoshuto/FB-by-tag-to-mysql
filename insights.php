@@ -5,7 +5,7 @@ require __DIR__ . '/config.php';
 try {
     // Returns a `FacebookFacebookResponse` object
 $response = $fb->get(
-    '/' . $page_id . '/posts?limit=100&fields=insights.metric(post_impressions,post_impressions_paid,post_impressions_unique,post_impressions_paid_unique,post_clicks_by_type,post_activity_by_action_type),created_time,message,id,type,permalink_url,full_picture',
+    '/407839822565162/posts?limit=100&fields=insights.metric(post_impressions,post_impressions_paid,post_impressions_unique,post_impressions_paid_unique,post_clicks_by_type,post_activity_by_action_type),created_time,message,id,type,permalink_url,full_picture',
     $token
 );
 } catch(FacebookExceptionsFacebookResponseException $e) {

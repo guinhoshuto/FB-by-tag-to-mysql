@@ -10,7 +10,7 @@
             print_r( $row);
             try {
                 $response = $fb->get(
-                    $act_id . '/insights?fields=spend,reach,impressions,social_spend&date_preset=lifetime&filtering=[{"field":"campaign.adlabels","operator":"ANY","value":["' . $row['tag'] . '"]}]',
+                    'act_1457805817613704/insights?fields=spend,reach,impressions,social_spend&date_preset=lifetime&filtering=[{"field":"campaign.adlabels","operator":"ANY","value":["' . $row['tag'] . '"]}]',
                     $token
                 );
             } catch (FacebookExceptionsFacebookResponseException $e){
